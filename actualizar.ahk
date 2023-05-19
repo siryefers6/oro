@@ -1,4 +1,5 @@
-﻿#NoEnv
+#NoTrayIcon
+#NoEnv
 #SingleInstance Force
 FormatTime, dia, %A_Now%, WDay
 

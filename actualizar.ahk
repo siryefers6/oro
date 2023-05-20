@@ -1,20 +1,28 @@
 #NoTrayIcon
+
 #NoEnv
 #SingleInstance Force
 FormatTime, dia, %A_Now%, WDay
 
-if (dia != 6){
+if (dia > 1 and dia < 6){
 fechaSalida += 1, days
 fechaEntrega += 2, days
 fechaSalida136 += 1, days
 fechaEntrega136 += 2, days
 }
-else{
+else if (dia = 6){
 fechaSalida += 3, days
 fechaEntrega += 4, days
 fechaSalida136 += 1, days
 fechaEntrega136 += 3, days
 }
+else if (dia = 7){
+fechaSalida += 2, days
+fechaEntrega += 3, days
+fechaSalida136 += 0, days
+fechaEntrega136 += 2, days
+}
+
 FormatTime, fechaSalida, %fechaSalida%, dd MMM yyyy
 FormatTime, fechaEntrega, %fechaEntrega%, dd MMM yyyy
 FormatTime, fechaSalida136, %fechaSalida136%, dd MMM yyyy

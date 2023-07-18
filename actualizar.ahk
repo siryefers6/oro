@@ -196,9 +196,16 @@ return
 
 Pause::process, close, AutoHotkey.exe
 
+!F2::
+process, close, corregir_asn.exe
+sleep 1000
+process, close, corregir_asn.exe
+return
+
 ^+::
 sendInput .Mas123456789#
 return
+
 
 
 
